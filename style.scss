@@ -1,0 +1,440 @@
+//global
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+//anims
+@keyframes price {
+    from {
+        color: rgb(7, 197, 7);
+    }
+    to {
+        color: rgb(0, 255, 0);
+    }
+}
+
+
+//mixins
+@mixin promoButton() {
+    margin-top: 50px;
+    padding: 20px 50px;
+    border: 1px solid rgb(234, 66, 5);
+    border-radius: 7px;
+    background-color: rgb(234, 66, 5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    &:hover{
+       
+        animation-duration: 0.5s;
+        animation-name: pulse;
+        background-color: white;
+        color: rgb(234, 66, 5);
+    }
+
+    @keyframes pulse {
+        from {
+            color: white;
+            background-color: rgb(234, 66, 5);
+        }
+      
+        to {
+            background-color: white;
+            color: rgb(234, 66, 5);
+        }
+      }
+}
+
+@mixin values() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;   
+}
+
+@mixin ingridients() {
+    margin-top: 30px;
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+
+    .ingt__pic {
+        border-radius: 75px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .ingt__info {
+        font-size: 30px;
+        margin-top: 5px;
+    }               
+}
+
+
+//standart css
+
+.main {
+    width: 1519px;
+    display: flex;
+    flex-direction: column;
+
+    .promo {
+        
+        width: 100%;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      
+        color: white;
+        
+        .video {
+            
+            position: relative;
+            z-index: -1;
+           
+            .video__media{
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .promo__name {
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+            .name-data{font-size: 50px;}
+        }
+
+        .promo__info {
+            width: 100%;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+            
+            .info__photo {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .photo__product {width: 300px; height: 400px;}   
+            }
+
+            .info__list {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .list__value {font-size: 30px;}
+                
+                .promo__button{
+                  @include promoButton();
+                }
+            }
+        }
+    }
+    
+    .components {
+
+        margin-top: 120px;
+        background: linear-gradient(rgb(105,22,94), 50%, rgb(255, 255, 255));
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+
+        .components__leftValues {
+           @include values();
+           .leftValues__ingt {
+            @include ingridients();
+           }
+        }
+
+        .components__product {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 33%;
+            .product__photo {
+                width: 300px;
+                height: 400px;
+            }
+            
+            .promo__button{
+                @include promoButton();
+                width: 250px;
+                height: 50px;
+                font-size: 30px
+               
+            }
+        }
+
+        .components__rightValues {
+            @include values();
+            .rightValues__ingt {
+             @include ingridients();
+            }
+        }
+    }
+
+    .reviews {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .carousel__container {
+            position: relative;
+            width: 90%;
+            max-width: 1500px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(rgb(245, 159, 0), 20%, rgb(255, 255, 255));
+
+            .carousel {
+                display: flex;
+                transition: transform 0.5s ease;
+
+                .carousel__item {
+                    min-width: 100%;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    text-align: center;
+
+                    .item__photo{
+                        width: 180px;
+                        height: 180px;
+                        border-radius: 20%;
+                        margin-bottom: 10px;
+                    }
+
+                    .item__name {
+                        margin: 10px 0;
+                        font-size: 40px;
+                    }
+
+                    .item__info{
+                        font-size: 20px;
+                        color: #555;
+                    }
+                }
+            }
+
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 50%;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+            }
+            
+            .prev {
+                left: 10px;
+            }
+            
+            .next {
+                right: 10px;
+            }        
+           
+        } 
+
+    }
+    
+    .advert {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(0.25turn, rgb(105,22,94), rgb(255, 255, 255));
+        .advert__product{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .product__pic{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                .photo{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            .product__info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                .info__txt {
+                    font-size: 25px;
+
+                }
+            }
+        }
+
+        .advert__discription {
+            margin-top: 150px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .dicription__txt{
+                display: flex;
+                justify-content: space-evenly;
+                .txt__charact {
+                    font-size: 30px;
+                    margin: 10px;
+                }
+            }
+        }
+
+        .promo__button{
+            @include promoButton();
+            font-size: 30px;
+            width: 250px;
+            height: 50px;
+        }
+    }
+
+    .offer {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient( rgb(255, 255, 255), rgb(105,22,94));
+        .offer__name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+        .timer {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+        .offer__container {
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            
+
+            .container__product {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+
+                .product__photo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .photo__orig {
+                        width: 270px;
+                        height: 400px;
+                    }
+                }
+
+                .product__price {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    p {
+                        margin: 30px;
+                    }
+
+                    .price__big{
+                        font-size: 30px;
+                        color: red;
+                        text-decoration: line-through;
+                    }
+
+                    .price__small{
+                        font-size: 45px;
+                        font-weight: bold;
+                        color: rgb(7, 197, 7);
+                        animation: price linear infinite;
+                        animation-duration: 1s;
+                    }
+
+                }
+
+            }
+            .container__form {
+
+                input {
+                    font-size: 30px;
+                }
+
+                ::placeholder {
+                    font-size: 25px;
+                }
+
+                width: 50%;
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .form__header {
+                    font-size: 40px;
+                }
+
+                .form__name {
+                    margin-top: 50px;
+                    width: 500px;
+                    height: 50px;
+                }
+
+                .form__phone {
+                    margin-top: 20px;
+                    width: 500px;
+                    height: 50px;
+                }
+            
+                .form__submit {
+                    @include promoButton();
+                    margin-top: 20px;
+                    width: 200px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+

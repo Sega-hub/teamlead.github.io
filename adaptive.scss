@@ -1,0 +1,456 @@
+//mixins
+@mixin promoButton() {
+    margin-top: 50px;
+    padding: 30px 90px;
+    border: 1px solid rgb(234, 66, 5);
+    border-radius: 7px;
+    background-color: rgb(234, 66, 5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+
+    &:hover{
+       
+        animation-duration: 0.5s;
+        animation-name: pulse;
+        background-color: white;
+        color: rgb(234, 66, 5);
+    }
+
+    @keyframes pulse {
+        from {
+            color: white;
+            background-color: rgb(234, 66, 5);
+        }
+      
+        to {
+            background-color: white;
+            color: rgb(234, 66, 5);
+        }
+      }
+}
+
+@mixin values() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;   
+}
+
+@mixin ingridients() {
+    margin-top: 50px;
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+
+    .ingt__pic {
+        border-radius: 75px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .ingt__info {
+        font-size: 50px;
+        margin-top: 5px;
+    }               
+}
+
+@media(min-width: 2560px) { //доработать
+   .main {
+    width: 2560px;
+    h1 {
+        font-size: 70px;
+    }
+    p {
+        font-size: 50px;
+    }
+   }
+}
+
+@media (min-width: 1550px) and (max-width: 2560px)  { 
+    body {
+        overflow-x: hidden;
+    }
+    .main {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+}
+
+@media(min-width: 1900px) { 
+   .main {
+        .promo{
+            .promo__name{
+                .name-data{font-size: 80px;}
+            }
+            .promo__info {
+                .info__photo {
+                    .photo__product {width: 400px; height: 600px;}   
+                }
+
+                .info__list {
+                    .list__value {font-size: 50px;}
+                    
+                    .promo__button{
+                    @include promoButton();                    
+                    }
+                }
+            }
+        }
+        .components {
+            .components__leftValues {
+                @include values();
+                .leftValues__ingt {
+                 @include ingridients();
+                }
+            }
+
+            .components__product {
+                .product__photo {
+                    width: 400px;
+                    height: 600px;
+                }
+                
+                .promo__button{
+                    @include promoButton();                   
+                }
+            }
+
+            .components__rightValues {
+                @include values();
+                .rightValues__ingt {
+                 @include ingridients();
+                }
+            }
+    
+        }
+        .reviews {
+            .carousel__container {
+                max-width: 1900px;
+                min-width: 1800px;
+                height: 600px;
+                
+                .carousel {
+                        
+                    .carousel__item {
+                        
+                        .item__photo{
+                            width: 230px;
+                            height: 230px;                    
+                        }
+    
+                        .item__name {
+                            font-size: 60px;
+                            
+                        }
+    
+                        .item__info{
+                            margin-top: 30px;
+                            font-size: 30px;
+                            color: #555;
+                        }
+                    }
+                }
+            }    
+        }
+        .advert {
+            .advert__product{
+                .product__pic{
+                    .photo{
+                        width: 450px;
+                        height: 450px;
+                    }
+                }
+    
+                .product__info {
+                    .info__txt {
+                        font-size: 40px;
+    
+                    }
+                }
+            }
+    
+            .advert__discription {
+                .dicription__txt{
+                    .txt__charact {
+                        font-size: 50px;                        
+                    }
+                }
+            }
+    
+            .promo__button{
+                @include promoButton();
+            }
+        }
+        .offer {            
+            .offer__name {            
+                font-size: 80px;
+            }
+            .timer {
+                font-size: 50px;
+            }
+            .offer__container {
+                margin-top: 150px;
+                .container__product {
+                    .product__photo {                       
+                        .photo__orig {
+                            width: 400px;
+                            height: 600px;
+                        }
+                    }    
+                    .product__price {
+                        p {
+                            margin: 30px;
+                        }
+    
+                        .price__big{
+                            font-size: 50px;
+                        }
+    
+                        .price__small{
+                            font-size: 65px;
+                        }    
+                    }    
+                }
+                .container__form {
+                    input {
+                        font-size: 50px;
+                    }
+                    ::placeholder {
+                        font-size: 50px;
+                    }
+                    .form__header {
+                        font-size: 80px;
+                    }
+    
+                    .form__name {                       
+                        width: 800px;
+                        height: 85px;
+                    }
+    
+                    .form__phone {
+                         width: 800px;
+                        height: 85px;
+                    }
+                
+                    .form__submit {
+                        @include promoButton();
+                        width: 500px;
+                        height: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 485px) {
+    .main {
+        max-width: 485px;
+        .promo {
+            .video {
+                .video__media{
+                    width: 100%;
+                   object-fit: cover;
+                   height: 1500px;
+                }
+            }
+
+            .promo__name {
+               
+                .name-data{font-size: 80px;}
+            }
+    
+            .promo__info {
+
+                .info__photo {
+                    .photo__product {width: 200px; height: 300px;}   
+                }
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+                .info__list {
+
+                    .list__value {margin-top: 20px;}
+                     
+                    .promo__button{
+                      margin-bottom: 50px;
+                      padding: 20px 90px; 
+                    }
+                }
+            }
+        }
+    
+        .components {
+            margin-top: 270px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            .components__product {
+                .product__photo {
+                    width: 200px;
+                    height: 300px;
+                }
+                
+                .promo__button{
+                    padding: 15px 45px;                   
+                }
+            }
+
+        }
+    
+        .reviews {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+    
+            .carousel__container {
+                max-width: 400px;
+                height: 400px;    
+                .carousel {
+                    .carousel__item {
+                        .item__photo{
+                            width: 100px;
+                            height: 100px;
+                        }
+    
+                        .item__name {                    
+                            font-size: 30px;
+                        }
+    
+                        .item__info{
+                            margin-top: 30px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            } 
+    
+        }
+
+        .advert {
+            .advert__product{
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;;
+    
+                .product__pic{
+                    .photo{
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+    
+                .product__info {
+                    margin-top: 25px;
+                    .info__txt {
+                        font-size: 15x;
+    
+                    }
+                }
+            }
+    
+            .advert__discription {
+                margin-top: 75px;
+                .dicription__txt{
+                    .txt__charact {
+                        font-size: 20px;
+                    }
+                }
+            }
+    
+            .promo__button{
+                padding: 15px 45px; 
+            }
+        }
+
+        .offer {
+            .offer__name {
+                font-size: 80px;
+            }
+            .timer {
+                font-size: 20px;
+            }
+            .offer__container {
+                margin-top: 50px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+    
+                .container__product {
+                    .product__photo {
+                        .photo__orig {
+                            width: 180px;
+                            height: 250px;
+                        }
+                    }
+    
+                    .product__price {
+    
+                        .price__big{
+                            font-size: 25px;
+                        }
+    
+                        .price__small{
+                            font-size: 40px;
+                        }
+    
+                    }
+    
+                }
+                .container__form {
+    
+                    input {
+                        font-size: 20px;
+                    }
+    
+                    ::placeholder {
+                        font-size: 22px;
+                    }
+    
+                    width: 50%;
+                    margin-top: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    .form__header {
+                        font-size: 40px;
+                        white-space: nowrap;
+                    }
+    
+                    .form__name {
+                        width: 350px;
+                        height: 30px;
+                    }
+    
+                    .form__phone {
+                        width: 350px;
+                        height: 30px;
+                    }
+                
+                    .form__submit {
+                       margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+ 
+
+
+

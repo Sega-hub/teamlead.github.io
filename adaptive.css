@@ -1,0 +1,411 @@
+@media (min-width: 2560px) {
+  .main {
+    width: 2560px;
+  }
+  .main h1 {
+    font-size: 70px;
+  }
+  .main p {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1550px) and (max-width: 2560px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 1900px) {
+  .main .promo .promo__name .name-data {
+    font-size: 80px;
+  }
+  .main .promo .promo__info .info__photo .photo__product {
+    width: 400px;
+    height: 600px;
+  }
+  .main .promo .promo__info .info__list .list__value {
+    font-size: 50px;
+  }
+  .main .promo .promo__info .info__list .promo__button {
+    margin-top: 50px;
+    padding: 30px 90px;
+    border: 1px solid rgb(234, 66, 5);
+    border-radius: 7px;
+    background-color: rgb(234, 66, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+  }
+  .main .promo .promo__info .info__list .promo__button:hover {
+    animation-duration: 0.5s;
+    animation-name: pulse;
+    background-color: white;
+    color: rgb(234, 66, 5);
+  }
+  @keyframes pulse {
+    from {
+      color: white;
+      background-color: rgb(234, 66, 5);
+    }
+    to {
+      background-color: white;
+      color: rgb(234, 66, 5);
+    }
+  }
+  .main .components .components__leftValues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+  }
+  .main .components .components__leftValues .leftValues__ingt {
+    margin-top: 50px;
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .components .components__leftValues .leftValues__ingt .ingt__pic {
+    border-radius: 75px;
+    width: 250px;
+    height: 250px;
+  }
+  .main .components .components__leftValues .leftValues__ingt .ingt__info {
+    font-size: 50px;
+    margin-top: 5px;
+  }
+  .main .components .components__product .product__photo {
+    width: 400px;
+    height: 600px;
+  }
+  .main .components .components__product .promo__button {
+    margin-top: 50px;
+    padding: 30px 90px;
+    border: 1px solid rgb(234, 66, 5);
+    border-radius: 7px;
+    background-color: rgb(234, 66, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+  }
+  .main .components .components__product .promo__button:hover {
+    animation-duration: 0.5s;
+    animation-name: pulse;
+    background-color: white;
+    color: rgb(234, 66, 5);
+  }
+  @keyframes pulse {
+    from {
+      color: white;
+      background-color: rgb(234, 66, 5);
+    }
+    to {
+      background-color: white;
+      color: rgb(234, 66, 5);
+    }
+  }
+  .main .components .components__rightValues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+  }
+  .main .components .components__rightValues .rightValues__ingt {
+    margin-top: 50px;
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .components .components__rightValues .rightValues__ingt .ingt__pic {
+    border-radius: 75px;
+    width: 250px;
+    height: 250px;
+  }
+  .main .components .components__rightValues .rightValues__ingt .ingt__info {
+    font-size: 50px;
+    margin-top: 5px;
+  }
+  .main .reviews .carousel__container {
+    max-width: 1900px;
+    min-width: 1800px;
+    height: 600px;
+  }
+  .main .reviews .carousel__container .carousel .carousel__item .item__photo {
+    width: 230px;
+    height: 230px;
+  }
+  .main .reviews .carousel__container .carousel .carousel__item .item__name {
+    font-size: 60px;
+  }
+  .main .reviews .carousel__container .carousel .carousel__item .item__info {
+    margin-top: 30px;
+    font-size: 30px;
+    color: #555;
+  }
+  .main .advert .advert__product .product__pic .photo {
+    width: 450px;
+    height: 450px;
+  }
+  .main .advert .advert__product .product__info .info__txt {
+    font-size: 40px;
+  }
+  .main .advert .advert__discription .dicription__txt .txt__charact {
+    font-size: 50px;
+  }
+  .main .advert .promo__button {
+    margin-top: 50px;
+    padding: 30px 90px;
+    border: 1px solid rgb(234, 66, 5);
+    border-radius: 7px;
+    background-color: rgb(234, 66, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+  }
+  .main .advert .promo__button:hover {
+    animation-duration: 0.5s;
+    animation-name: pulse;
+    background-color: white;
+    color: rgb(234, 66, 5);
+  }
+  @keyframes pulse {
+    from {
+      color: white;
+      background-color: rgb(234, 66, 5);
+    }
+    to {
+      background-color: white;
+      color: rgb(234, 66, 5);
+    }
+  }
+  .main .offer .offer__name {
+    font-size: 80px;
+  }
+  .main .offer .timer {
+    font-size: 50px;
+  }
+  .main .offer .offer__container {
+    margin-top: 150px;
+  }
+  .main .offer .offer__container .container__product .product__photo .photo__orig {
+    width: 400px;
+    height: 600px;
+  }
+  .main .offer .offer__container .container__product .product__price p {
+    margin: 30px;
+  }
+  .main .offer .offer__container .container__product .product__price .price__big {
+    font-size: 50px;
+  }
+  .main .offer .offer__container .container__product .product__price .price__small {
+    font-size: 65px;
+  }
+  .main .offer .offer__container .container__form input {
+    font-size: 50px;
+  }
+  .main .offer .offer__container .container__form ::-moz-placeholder {
+    font-size: 50px;
+  }
+  .main .offer .offer__container .container__form ::placeholder {
+    font-size: 50px;
+  }
+  .main .offer .offer__container .container__form .form__header {
+    font-size: 80px;
+  }
+  .main .offer .offer__container .container__form .form__name {
+    width: 800px;
+    height: 85px;
+  }
+  .main .offer .offer__container .container__form .form__phone {
+    width: 800px;
+    height: 85px;
+  }
+  .main .offer .offer__container .container__form .form__submit {
+    margin-top: 50px;
+    padding: 30px 90px;
+    border: 1px solid rgb(234, 66, 5);
+    border-radius: 7px;
+    background-color: rgb(234, 66, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    width: 500px;
+    height: 90px;
+  }
+  .main .offer .offer__container .container__form .form__submit:hover {
+    animation-duration: 0.5s;
+    animation-name: pulse;
+    background-color: white;
+    color: rgb(234, 66, 5);
+  }
+  @keyframes pulse {
+    from {
+      color: white;
+      background-color: rgb(234, 66, 5);
+    }
+    to {
+      background-color: white;
+      color: rgb(234, 66, 5);
+    }
+  }
+}
+@media (max-width: 485px) {
+  .main {
+    max-width: 485px;
+  }
+  .main .promo .video .video__media {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 1500px;
+  }
+  .main .promo .promo__name .name-data {
+    font-size: 80px;
+  }
+  .main .promo .promo__info {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main .promo .promo__info .info__photo .photo__product {
+    width: 200px;
+    height: 300px;
+  }
+  .main .promo .promo__info .info__list .list__value {
+    margin-top: 20px;
+  }
+  .main .promo .promo__info .info__list .promo__button {
+    margin-bottom: 50px;
+    padding: 20px 90px;
+  }
+  .main .components {
+    margin-top: 270px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .components .components__product .product__photo {
+    width: 200px;
+    height: 300px;
+  }
+  .main .components .components__product .promo__button {
+    padding: 15px 45px;
+  }
+  .main .reviews {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .main .reviews .carousel__container {
+    max-width: 400px;
+    height: 400px;
+  }
+  .main .reviews .carousel__container .carousel .carousel__item .item__photo {
+    width: 100px;
+    height: 100px;
+  }
+  .main .reviews .carousel__container .carousel .carousel__item .item__name {
+    font-size: 30px;
+  }
+  .main .reviews .carousel__container .carousel .carousel__item .item__info {
+    margin-top: 30px;
+    font-size: 15px;
+  }
+  .main .advert .advert__product {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .advert .advert__product .product__pic .photo {
+    width: 200px;
+    height: 200px;
+  }
+  .main .advert .advert__product .product__info {
+    margin-top: 25px;
+  }
+  .main .advert .advert__product .product__info .info__txt {
+    font-size: 15x;
+  }
+  .main .advert .advert__discription {
+    margin-top: 75px;
+  }
+  .main .advert .advert__discription .dicription__txt .txt__charact {
+    font-size: 20px;
+  }
+  .main .advert .promo__button {
+    padding: 15px 45px;
+  }
+  .main .offer .offer__name {
+    font-size: 80px;
+  }
+  .main .offer .timer {
+    font-size: 20px;
+  }
+  .main .offer .offer__container {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .offer .offer__container .container__product .product__photo .photo__orig {
+    width: 180px;
+    height: 250px;
+  }
+  .main .offer .offer__container .container__product .product__price .price__big {
+    font-size: 25px;
+  }
+  .main .offer .offer__container .container__product .product__price .price__small {
+    font-size: 40px;
+  }
+  .main .offer .offer__container .container__form {
+    width: 50%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .offer .offer__container .container__form input {
+    font-size: 20px;
+  }
+  .main .offer .offer__container .container__form ::-moz-placeholder {
+    font-size: 22px;
+  }
+  .main .offer .offer__container .container__form ::placeholder {
+    font-size: 22px;
+  }
+  .main .offer .offer__container .container__form .form__header {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+  .main .offer .offer__container .container__form .form__name {
+    width: 350px;
+    height: 30px;
+  }
+  .main .offer .offer__container .container__form .form__phone {
+    width: 350px;
+    height: 30px;
+  }
+  .main .offer .offer__container .container__form .form__submit {
+    margin-bottom: 50px;
+  }
+}/*# sourceMappingURL=adaptive.css.map */

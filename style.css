@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+@keyframes price {
+  from {
+    color: rgb(7, 197, 7);
+  }
+  to {
+    color: rgb(0, 255, 0);
+  }
+}
+.main {
+  width: 1519px;
+  display: flex;
+  flex-direction: column;
+}
+.main .promo {
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.main .promo .video {
+  position: relative;
+  z-index: -1;
+}
+.main .promo .video .video__media {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main .promo .promo__name {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.main .promo .promo__name .name-data {
+  font-size: 50px;
+}
+.main .promo .promo__info {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.main .promo .promo__info .info__photo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .promo .promo__info .info__photo .photo__product {
+  width: 300px;
+  height: 400px;
+}
+.main .promo .promo__info .info__list {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .promo .promo__info .info__list .list__value {
+  font-size: 30px;
+}
+.main .promo .promo__info .info__list .promo__button {
+  margin-top: 50px;
+  padding: 20px 50px;
+  border: 1px solid rgb(234, 66, 5);
+  border-radius: 7px;
+  background-color: rgb(234, 66, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.main .promo .promo__info .info__list .promo__button:hover {
+  animation-duration: 0.5s;
+  animation-name: pulse;
+  background-color: white;
+  color: rgb(234, 66, 5);
+}
+@keyframes pulse {
+  from {
+    color: white;
+    background-color: rgb(234, 66, 5);
+  }
+  to {
+    background-color: white;
+    color: rgb(234, 66, 5);
+  }
+}
+.main .components {
+  margin-top: 120px;
+  background: linear-gradient(rgb(105, 22, 94), 50%, rgb(255, 255, 255));
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.main .components .components__leftValues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.main .components .components__leftValues .leftValues__ingt {
+  margin-top: 30px;
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  align-items: center;
+}
+.main .components .components__leftValues .leftValues__ingt .ingt__pic {
+  border-radius: 75px;
+  width: 200px;
+  height: 200px;
+}
+.main .components .components__leftValues .leftValues__ingt .ingt__info {
+  font-size: 30px;
+  margin-top: 5px;
+}
+.main .components .components__product {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+.main .components .components__product .product__photo {
+  width: 300px;
+  height: 400px;
+}
+.main .components .components__product .promo__button {
+  margin-top: 50px;
+  padding: 20px 50px;
+  border: 1px solid rgb(234, 66, 5);
+  border-radius: 7px;
+  background-color: rgb(234, 66, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  width: 250px;
+  height: 50px;
+  font-size: 30px;
+}
+.main .components .components__product .promo__button:hover {
+  animation-duration: 0.5s;
+  animation-name: pulse;
+  background-color: white;
+  color: rgb(234, 66, 5);
+}
+@keyframes pulse {
+  from {
+    color: white;
+    background-color: rgb(234, 66, 5);
+  }
+  to {
+    background-color: white;
+    color: rgb(234, 66, 5);
+  }
+}
+.main .components .components__rightValues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.main .components .components__rightValues .rightValues__ingt {
+  margin-top: 30px;
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  align-items: center;
+}
+.main .components .components__rightValues .rightValues__ingt .ingt__pic {
+  border-radius: 75px;
+  width: 200px;
+  height: 200px;
+}
+.main .components .components__rightValues .rightValues__ingt .ingt__info {
+  font-size: 30px;
+  margin-top: 5px;
+}
+.main .reviews {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main .reviews .carousel__container {
+  position: relative;
+  width: 90%;
+  max-width: 1500px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(rgb(245, 159, 0), 20%, rgb(255, 255, 255));
+}
+.main .reviews .carousel__container .carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.main .reviews .carousel__container .carousel .carousel__item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+.main .reviews .carousel__container .carousel .carousel__item .item__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 20%;
+  margin-bottom: 10px;
+}
+.main .reviews .carousel__container .carousel .carousel__item .item__name {
+  margin: 10px 0;
+  font-size: 40px;
+}
+.main .reviews .carousel__container .carousel .carousel__item .item__info {
+  font-size: 20px;
+  color: #555;
+}
+.main .reviews .carousel__container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.main .reviews .carousel__container button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.main .reviews .carousel__container .prev {
+  left: 10px;
+}
+.main .reviews .carousel__container .next {
+  right: 10px;
+}
+.main .advert {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(0.25turn, rgb(105, 22, 94), rgb(255, 255, 255));
+}
+.main .advert .advert__product {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.main .advert .advert__product .product__pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.main .advert .advert__product .product__pic .photo {
+  width: 300px;
+  height: 300px;
+}
+.main .advert .advert__product .product__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.main .advert .advert__product .product__info .info__txt {
+  font-size: 25px;
+}
+.main .advert .advert__discription {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .advert .advert__discription .dicription__txt {
+  display: flex;
+  justify-content: space-evenly;
+}
+.main .advert .advert__discription .dicription__txt .txt__charact {
+  font-size: 30px;
+  margin: 10px;
+}
+.main .advert .promo__button {
+  margin-top: 50px;
+  padding: 20px 50px;
+  border: 1px solid rgb(234, 66, 5);
+  border-radius: 7px;
+  background-color: rgb(234, 66, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  width: 250px;
+  height: 50px;
+}
+.main .advert .promo__button:hover {
+  animation-duration: 0.5s;
+  animation-name: pulse;
+  background-color: white;
+  color: rgb(234, 66, 5);
+}
+@keyframes pulse {
+  from {
+    color: white;
+    background-color: rgb(234, 66, 5);
+  }
+  to {
+    background-color: white;
+    color: rgb(234, 66, 5);
+  }
+}
+.main .offer {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(105, 22, 94));
+}
+.main .offer .offer__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+.main .offer .timer {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.main .offer .offer__container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.main .offer .offer__container .container__product {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.main .offer .offer__container .container__product .product__photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .offer .offer__container .container__product .product__photo .photo__orig {
+  width: 270px;
+  height: 400px;
+}
+.main .offer .offer__container .container__product .product__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .offer .offer__container .container__product .product__price p {
+  margin: 30px;
+}
+.main .offer .offer__container .container__product .product__price .price__big {
+  font-size: 30px;
+  color: red;
+  text-decoration: line-through;
+}
+.main .offer .offer__container .container__product .product__price .price__small {
+  font-size: 45px;
+  font-weight: bold;
+  color: rgb(7, 197, 7);
+  animation: price linear infinite;
+  animation-duration: 1s;
+}
+.main .offer .offer__container .container__form {
+  width: 50%;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .offer .offer__container .container__form input {
+  font-size: 30px;
+}
+.main .offer .offer__container .container__form ::-moz-placeholder {
+  font-size: 25px;
+}
+.main .offer .offer__container .container__form ::placeholder {
+  font-size: 25px;
+}
+.main .offer .offer__container .container__form .form__header {
+  font-size: 40px;
+}
+.main .offer .offer__container .container__form .form__name {
+  margin-top: 50px;
+  width: 500px;
+  height: 50px;
+}
+.main .offer .offer__container .container__form .form__phone {
+  margin-top: 20px;
+  width: 500px;
+  height: 50px;
+}
+.main .offer .offer__container .container__form .form__submit {
+  margin-top: 50px;
+  padding: 20px 50px;
+  border: 1px solid rgb(234, 66, 5);
+  border-radius: 7px;
+  background-color: rgb(234, 66, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  width: 200px;
+  height: 25px;
+}
+.main .offer .offer__container .container__form .form__submit:hover {
+  animation-duration: 0.5s;
+  animation-name: pulse;
+  background-color: white;
+  color: rgb(234, 66, 5);
+}
+@keyframes pulse {
+  from {
+    color: white;
+    background-color: rgb(234, 66, 5);
+  }
+  to {
+    background-color: white;
+    color: rgb(234, 66, 5);
+  }
+}/*# sourceMappingURL=style.css.map */
