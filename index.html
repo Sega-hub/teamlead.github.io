@@ -126,7 +126,7 @@
                 <div class="container__form">
                     <h2 class="form__header">Оформи заказ</h2>
                     <input type="text" class="form__name" placeholder="Евгений" id="nameForm">
-                    <input type="text" pattern="[0-9]*" class="form__phone" placeholder="8 (952) 845 65 29 " id="phoneForm">
+                    <input type="text" onkeypress='validate(event)' class="form__phone" placeholder="8 (952) 845 65 29 " id="phoneForm">
                     <button class="form__submit" id="form__button">Заказать</button>
                 </div>
             </div>
